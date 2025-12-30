@@ -1,12 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML> 
+<HTML lang="fa">
 <head>
-  <title>Title of the document</title>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <META NAME="VIEWPORT"
+content="width=device-width,initial-scale=1 .0">
+  <title>mashin hesabe modern</title>
+  <link href="https://cdn.tailwindcss.com"
+rel="stylsheet">
+</head>  
+<body class="bg-gray-100 flex items center justify-center h-screen">
 
-<h1>Ahmad naimi</h1>
-<p>this is my first site.</p>
+  <div class="bg-white p-6 rounded-*1 shadow-lg w-80">
+    <input id="disply" type="text" class="w-full text-right text-2*1 p-2 mb-4 broder rounder rounder" disable placeholder="0">
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="btn"onclick="appendvalue('7')">7</button>
+      <button class="btn"onclick="appendvalue('8')">8</button>
+      <button class="btn"onclick="appendvalue('9')">9</button>
+      <button class="btn"onclick="appendvalue('/')">/</button>
+
+      <button class="btn"onclick="appendvalue('4')">4</button>
+      <button class="btn"onclick="appendvalue('5')">5</button>
+      <button class="btn"onclick="appendvalue('6')">6</button>
+      <button class="btn"onclick="appendvalue('*')">*</button>
+
+      <button class="btn"onclick="appendvalue('1')">1</button>
+      <button class="btn"onclick="appendvalue('2')">2</button>
+      <button class="btn"onclick="appendvalue('3')">3</button>
+      <button class="btn"onclick="appendvalue('-')">-</button>
+
+      <button class="btn"onclick="appendvalue('0')">0</button>
+      <button class="btn"onclick="appendvalue('.')">.</button>
+      <button class="btn equal col-span-2"onclick="calculate()">=</button>
+      <button class="btn operator"onclick="appendvalue('+')">+</button>
+    </div>
+
+    <button class="btn w-full mt-3  bg-red-500 text-white hover:bg-red-600"onclick="cleardisplay()">pak kardan</button>
+  </div>
+
+  <script>
+    const display =
+      document.getelementbyid('display');
+
+    function appendvalue(val) {display.value += '';}
+    function cleardisplay() {display.value = '';}
+    function calculate() { try {display.value = eval (display.value);
+                               } catch {display.value = 'khata';}
+                          
+                         }
+  </script>
+
+  <style>
+    .btn {
+      padding: 15px;
+      background-color:# f3f4f6;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      transition: all 0.2s:
+    }
+    .btn:hover { background-color:# e5e7eb;
+               }
+    .operator { background-color:# f59e0b;
+              }
+    .operator:hover { background-color:# d99706
+                    }
+    .equal { background-color:# 10b981;
+            color: white:
+           }
+    .equal { background-color:# 059669;
+           }
+  </style>
 
 </body>
-</html>
+</HTML>
